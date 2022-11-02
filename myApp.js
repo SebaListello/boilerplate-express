@@ -22,7 +22,7 @@ if(process.env.MESSAGE_STYLE ==='uppercase'){
   response.message = response.message.toUpperCase();  
 }
 
-return res.json(response);
+console.log(res.json(response));
 });
 
 
