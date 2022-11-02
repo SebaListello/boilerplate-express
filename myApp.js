@@ -30,6 +30,17 @@ app.use( (req, res, next)=>{
   next();
   })
 
+app.get("/now", (req, res, next) => {
+    // adding a new property to req object
+    // in the middleware function
+    req.time = new Date().toString();
+    next();
+  },
+  (req, res) => {
+    res.send({time: req.time});
+  }
+);
+
 
 
 
