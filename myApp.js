@@ -11,20 +11,24 @@ let app = express();
 //   res.sendFile(__dirname + "/views/index.html");
 // });
 
-app.get('/json', function(req, res){
+// app.get('/json', function(req, res){
 // Variable assignment as object
-var response = {
-  "message": "Hello json"
-};
+// var response = {
+//   "message": "Hello json"
+// };
 
-if(process.env.MESSAGE_STYLE ==='uppercase'){
-  //Override message attribute value based on condition
-  response.message = response.message.toUpperCase();  
-}
+// if(process.env.MESSAGE_STYLE ==="uppercase"){
+//   //Override message attribute value based on condition
+//   response.message = response.message.toUpperCase();  
+// }
 
-console.log(res.json(response));
-});
+// console.log(res.json(response));
+// });
 
+app.use( (req, res, next)=>{
+  console.log("req.method+ ' '+req.path+'-'+req.ip ");
+  next();
+  })
 
 
 
