@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/json', function(req, res){
-Variable assignment as object
+//Variable assignment as object
 var response = {
   "message": "Hello json"
 };
