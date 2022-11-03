@@ -4,6 +4,10 @@ const app = express();
 const bodyParser = require("body-parser");
 
 app.use(bodyParser.urlencoded({ extended: false }));
+
+app.post('/', bodyParser.urlencoded({ extended: false }), function (req, res, next) {
+  console.log(req)
+})
 // console.log("Hello World")
 
 // app.use("/public", express.static(__dirname + "/public"));
